@@ -1,3 +1,18 @@
+// Efek nama kelompok 3D: split per huruf
+window.addEventListener("DOMContentLoaded", function () {
+  const fireNames = document.querySelectorAll(".fire-name");
+  fireNames.forEach(function (nameElement) {
+    const text = nameElement.innerText;
+    nameElement.innerHTML = "";
+    [...text].forEach(function (char) {
+      const span = document.createElement("span");
+      span.className = char === " " ? "char space" : "char";
+      span.innerText = char;
+      nameElement.appendChild(span);
+    });
+  });
+});
+
 // Navbar menambahkan bayangan saat di-scroll
 window.addEventListener("scroll", function () {
   const nav = document.getElementById("mainNav");
