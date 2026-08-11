@@ -204,64 +204,66 @@ body {
   color: #fff;
 }
 
-/* ===== Nama Kelompok 3D elegan ===== */
-.fire-names {
+/* ===== Kartu Mahasiswa Flip ===== */
+.flame-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 15px;
+}
+.card-mahasiswa {
+  height: 100px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.card-mahasiswa.is-flipped .card-inner {
+  transform: rotateY(180deg);
+}
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  justify-content: center;
   align-items: center;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid #065366;
+  background: #fff;
 }
-.fire-name {
-  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
-  font-size: clamp(1.3rem, 3vw, 2rem);
-  font-weight: 800;
-  letter-spacing: 1px;
-  line-height: 1.25;
-  text-align: center;
-  color: #f8f2d0;
-  text-transform: uppercase;
-  text-shadow:
-    0 1px 0 #0b2d39,
-    0 2px 0 #0b2d39,
-    0 3px 0 #0b2d39,
-    0 4px 8px rgba(0, 0, 0, 0.35),
-    0 0 10px rgba(212, 120, 0, 0.55);
-  transform: perspective(600px) rotateX(8deg);
-  filter: drop-shadow(0 8px 10px rgba(6, 83, 102, 0.22));
+.card-back {
+  transform: rotateY(180deg);
+  background: #065366;
+  color: #fff;
 }
-.fire-name .char {
-  display: inline-block;
-  animation: letterGlow 2.2s ease-in-out infinite;
-  transform-origin: center bottom;
-}
-.fire-name .char:nth-child(3n) { animation-delay: 0.08s; }
-.fire-name .char:nth-child(4n) { animation-delay: 0.16s; }
-.fire-name .char:nth-child(5n) { animation-delay: 0.24s; }
-.fire-name .char:nth-child(6n) { animation-delay: 0.32s; }
-.fire-name .char:nth-child(7n) { animation-delay: 0.4s; }
-@keyframes letterGlow {
-  0%, 100% {
-    color: #f8f2d0;
-    text-shadow:
-      0 1px 0 #0b2d39,
-      0 2px 0 #0b2d39,
-      0 3px 0 #0b2d39,
-      0 4px 8px rgba(0, 0, 0, 0.35),
-      0 0 10px rgba(212, 120, 0, 0.45);
-    transform: translateY(0);
-  }
-  50% {
-    color: #ffffff;
-    text-shadow:
-      0 1px 0 #0b2d39,
-      0 2px 0 #0b2d39,
-      0 3px 0 #0b2d39,
-      0 4px 10px rgba(0, 0, 0, 0.4),
-      0 0 14px rgba(212, 120, 0, 0.7);
-    transform: translateY(-1px);
-  }
-}
-.fire-name .char.space {
+.nim {
+  font-size: 1.2rem;
+  font-weight: bold;
   opacity: 0;
-  width: 0.35em;
+  transition: opacity 1s ease 0.5s;
+}
+.is-flipped .nim {
+  opacity: 1;
+}
+.smoke {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: radial-gradient(circle, rgba(200,200,200,0.8), transparent);
+  opacity: 0;
+}
+.is-flipped .smoke {
+  animation: boom 0.6s ease-out;
+}
+@keyframes boom {
+  0% { transform: scale(0.5); opacity: 1; }
+  100% { transform: scale(2); opacity: 0; }
 }
