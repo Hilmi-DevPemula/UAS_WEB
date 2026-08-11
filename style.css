@@ -1,0 +1,15 @@
+body {
+  background-color: #f0f8ff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.hero-section {
+  background: linear-gradient(135deg, #ff9900, #ff5500);
+  color: white;
+  padding: 40px 0;
+}
+.animal-card {
+  transition: transform 0.2s;
+}
+.animal-card:hover {
+  transform: scale(1.03);
+}
