@@ -40,12 +40,22 @@
         </button>
         <div class="collapse navbar-collapse" id="menuNav">
           <ul class="navbar-nav ms-auto align-items-lg-center">
-            <li class="nav-item"><a class="nav-link active" href="#beranda">Beranda</a></li>
-            <li class="nav-item"><a class="nav-link" href="#materi">Materi</a></li>
-            <li class="nav-item"><a class="nav-link" href="#media">Media</a></li>
-            <li class="nav-item"><a class="nav-link" href="#tabel">Tabel</a></li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#beranda">Beranda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#materi">Materi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#media">Media</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#tabel">Tabel</a>
+            </li>
             <li class="nav-item"><a class="nav-link" href="#kuis">Kuis</a></li>
-            <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#kontak">Kontak</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -70,7 +80,7 @@
     <!-- Running text (berita berjalan) -->
     <div class="marquee">
       <div class="marquee-inner">
-        <span>📢 SELAMAT DATANG DI DINAS EDUKASI DUNIA HEWAN</span>
+        <span>📢 SELAMAT DATANG DI WEBSITE KELOMPOK 10</span>
         <span>📚 BELAJAR SERU TENTANG HEWAN</span>
         <span>🏆 IKUTI KUIS DAN DAPATKAN SKOR 100</span>
       </div>
@@ -112,7 +122,9 @@
       <!-- Kartu hewan 3D -->
       <section class="mb-4">
         <h2 class="section-title">🐾 Galeri Hewan 3D</h2>
-        <p class="text-white-50">Arahkan kursor ke kartu untuk melihat efek 3D-nya.</p>
+        <p class="text-white-50">
+          Arahkan kursor ke kartu untuk melihat efek 3D-nya.
+        </p>
         <div class="row g-4">
           <div class="col-6 col-md-4 col-lg-3">
             <div class="card-3d animal-card">
@@ -205,7 +217,9 @@
       <section id="tabel" class="section-card mb-4">
         <h2 class="section-title">📋 Tabel Suara Hewan Populer</h2>
         <div class="table-responsive">
-          <table class="table table-bordered table-striped text-center align-middle">
+          <table
+            class="table table-bordered table-striped text-center align-middle"
+          >
             <thead class="table-head">
               <tr>
                 <th>Nama Hewan</th>
@@ -267,15 +281,33 @@
               >1. Hewan apakah yang mengeluarkan suara "Mooo... Mooo..."?</label
             >
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="q1" value="wrong" id="q1a" />
+              <input
+                class="form-check-input"
+                type="radio"
+                name="q1"
+                value="wrong"
+                id="q1a"
+              />
               <label class="form-check-label" for="q1a">Kambing</label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="q1" value="correct" id="q1b" />
+              <input
+                class="form-check-input"
+                type="radio"
+                name="q1"
+                value="correct"
+                id="q1b"
+              />
               <label class="form-check-label" for="q1b">Sapi</label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="q1" value="wrong" id="q1c" />
+              <input
+                class="form-check-input"
+                type="radio"
+                name="q1"
+                value="wrong"
+                id="q1c"
+              />
               <label class="form-check-label" for="q1c">Kucing</label>
             </div>
           </div>
@@ -285,20 +317,42 @@
               >2. Suara unik "Kukuruyuk!" berasal dari hewan apa?</label
             >
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="q2" value="correct" id="q2a" />
+              <input
+                class="form-check-input"
+                type="radio"
+                name="q2"
+                value="correct"
+                id="q2a"
+              />
               <label class="form-check-label" for="q2a">Ayam Jago</label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="q2" value="wrong" id="q2b" />
+              <input
+                class="form-check-input"
+                type="radio"
+                name="q2"
+                value="wrong"
+                id="q2b"
+              />
               <label class="form-check-label" for="q2b">Bebek</label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="q2" value="wrong" id="q2c" />
+              <input
+                class="form-check-input"
+                type="radio"
+                name="q2"
+                value="wrong"
+                id="q2c"
+              />
               <label class="form-check-label" for="q2c">Burung Hantu</label>
             </div>
           </div>
 
-          <button type="button" class="btn btn-gov btn-lg" onclick="cekJawaban()">
+          <button
+            type="button"
+            class="btn btn-gov btn-lg"
+            onclick="cekJawaban()"
+          >
             Periksa Jawaban 🚀
           </button>
         </form>
@@ -309,18 +363,33 @@
       <!-- Kontak (Form Kontak) -->
       <section id="kontak" class="section-card mb-4">
         <h2 class="section-title">📮 Hubungi Kami</h2>
-        <form onsubmit="return kirimPesan(event)">
+        <form onsubmit="return kirimPesan(event);">
           <div class="mb-3">
             <label for="nama" class="form-label">Nama Lengkap</label>
-            <input type="text" class="form-control bg-dark text-white" id="nama" placeholder="Masukkan nama" />
+            <input
+              type="text"
+              class="form-control bg-dark text-white"
+              id="nama"
+              placeholder="Masukkan nama"
+            />
           </div>
           <div class="mb-3">
             <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control bg-dark text-white" id="email" placeholder="nama@email.com" />
+            <input
+              type="email"
+              class="form-control bg-dark text-white"
+              id="email"
+              placeholder="nama@email.com"
+            />
           </div>
           <div class="mb-3">
             <label for="pesan" class="form-label">Pesan</label>
-            <textarea class="form-control bg-dark text-white" id="pesan" rows="3" placeholder="Tulis pesan Anda"></textarea>
+            <textarea
+              class="form-control bg-dark text-white"
+              id="pesan"
+              rows="3"
+              placeholder="Tulis pesan Anda"
+            ></textarea>
           </div>
           <button type="submit" class="btn btn-gov">Kirim Pesan ✉️</button>
         </form>
