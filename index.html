@@ -1,216 +1,294 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Edukasi Anak: Mengenal Nama & Suara Hewan</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edukasi Anak: Mengenal Nama & Suara Hewan</title>
 
-  <!-- Template / Framework (b): Bootstrap 5 via CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Template / Framework (b): Bootstrap 5 via CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-  <!-- Custom CSS (a & b) -->
-  <style>
-    body { 
-      background-color: #f0f8ff; 
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    .hero-section { 
-      background: linear-gradient(135deg, #ff9900, #ff5500); 
-      color: white; 
-      padding: 40px 0; 
-    }
-    .animal-card {
-      transition: transform 0.2s;
-    }
-    .animal-card:hover {
-      transform: scale(1.03);
-    }
-  </style>
-</head>
-<body>
+    <!-- Custom CSS (a & b) -->
+    <style>
+      body {
+        background-color: #f0f8ff;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .hero-section {
+        background: linear-gradient(135deg, #ff9900, #ff5500);
+        color: white;
+        padding: 40px 0;
+      }
+      .animal-card {
+        transition: transform 0.2s;
+      }
+      .animal-card:hover {
+        transform: scale(1.03);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Heading & Header -->
+    <header class="hero-section text-center mb-4 shadow">
+      <h1>🦁 Dunia Hewan: Nama & Suaranya 🐮</h1>
+      <p class="lead">
+        Mari belajar mengenal nama hewan, suaranya, dan habitatnya dengan seru!
+      </p>
+    </header>
 
-  <!-- Heading & Header -->
-  <header class="hero-section text-center mb-4 shadow">
-    <h1>🦁 Dunia Hewan: Nama & Suaranya 🐮</h1>
-    <p class="lead">Mari belajar mengenal nama hewan, suaranya, dan habitatnya dengan seru!</p>
-  </header>
-
-  <div class="container mb-5">
-    <!-- Gambar Banner (Image) -->
-    <div class="text-center mb-4">
-      <img src="https://images.unsplash.com/photo-1535083783855-76ae62b2914e?auto=format&fit=crop&w=800&q=80" alt="Banner Hewan" class="img-fluid rounded shadow" style="max-height: 300px; width: 100%; object-fit: cover;">
-    </div>
-
-    <!-- Formatting Text & Paragraf -->
-    <section class="mb-4 bg-white p-4 rounded shadow-sm">
-      <h2>Mengapa Belajar Suara Hewan Itu Penting?</h2>
-      <p>Mengenal <b>nama-nama hewan</b> dan <i>suara uniknya</i> membantu anak-anak mengembangkan kemampuan kognitif dan kosa kata sejak dini. Setiap hewan memiliki <u>karakteristik suara tersendiri</u> untuk berkomunikasi di habitatnya.</p>
-    </section>
-
-    <!-- List & Link -->
-    <section class="mb-4 bg-white p-4 rounded shadow-sm">
-      <h3>Kategori Hewan Berdasarkan Habitat:</h3>
-      <ul>
-        <li><b>Darat:</b> Kucing, Anjing, Sapi, Singa</li>
-        <li><b>Air:</b> Ikan, Paus, Lumba-lumba</li>
-        <li><b>Udara (Burung):</b> Burung Hantu, Ayam, Bebek</li>
-      </ul>
-      <p>Referensi belajar lanjutan: <a href="https://id.wikipedia.org/wiki/Hewan" target="_blank" rel="noopener">Wikipedia - Dunia Hewan</a></p>
-    </section>
-
-    <!-- Audio & Video -->
-    <section class="mb-4 bg-white p-4 rounded shadow-sm">
-      <h3>Media Pembelajaran Suara Hewan</h3>
-      <div class="row">
-        <div class="col-md-6 mb-3">
-          <h5>🎵 Contoh Suara Kucing:</h5>
-          <audio controls class="w-100">
-            <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg">
-            Browser Anda tidak mendukung elemen audio.
-          </audio>
-          <small class="text-muted">*Contoh pemutar audio suara hewan</small>
-        </div>
-        <div class="col-md-6 mb-3">
-          <h5>🎬 Video Suara Hewan:</h5>
-          <video controls class="w-100 rounded" style="max-height: 200px;">
-            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-            Browser Anda tidak mendukung elemen video.
-          </video>
-        </div>
+    <div class="container mb-5">
+      <!-- Gambar Banner (Image) -->
+      <div class="text-center mb-4">
+        <img
+          src="https://images.unsplash.com/photo-1535083783855-76ae62b2914e?auto=format&fit=crop&w=800&q=80"
+          alt="Banner Hewan"
+          class="img-fluid rounded shadow"
+          style="max-height: 300px; width: 100%; object-fit: cover"
+        />
       </div>
-    </section>
 
-<!-- Tabel Suara Hewan -->
-    <section class="mb-4 bg-white p-4 rounded shadow-sm">
-      <h3>Tabel Suara Hewan Populer</h3>
-      <table class="table table-bordered table-striped text-center align-middle">
-        <thead class="table-warning">
-          <tr>
-            <th>Nama Hewan</th>
-            <th>Bunyi Suara (Onomatope)</th>
-            <th>Ciri khas Suara</th>
-            <th>Makanan Utama</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Kucing 🐱</td>
-            <td><b>"Meong... Meong..."</b></td>
-            <td>Mengeong lembut saat meminta makan</td>
-            <td>Ikan / Daging</td>
-          </tr>
-          <tr>
-            <td>Sapi 🐮</td>
-            <td><b>"Mooo... Mooo..."</b></td>
-            <td>Lenguhan berat & bergema</td>
-            <td>Rumput</td>
-          </tr>
-          <tr>
-            <td>Anjing 🐶</td>
-            <td><b>"Guk... Guk!"</b> / <b>"Gong... Gong!"</b></td>
-            <td>Gonggongan nyaring untuk menjaga tempat</td>
-            <td>Daging</td>
-          </tr>
-          <tr>
-            <td>Ayam Jago 🐓</td>
-            <td><b>"Kukuruyuk!"</b></td>
-            <td>Berkokok kencang di pagi hari</td>
-            <td>Biji-bijian</td>
-          </tr>
-          <tr>
-            <td>Kambing 🐐</td>
-            <td><b>"Mbee... Mbee..."</b></td>
-            <td>Suara mengembik dengan nada tinggi</td>
-            <td>Daun & Rumput</td>
-          </tr>
-          <tr>
-            <td>Bebek 🦆</td>
-            <td><b>"Kwek... Kwek..."</b></td>
-            <td>Suara bersahutan saat berenang</td>
-            <td>Cacing & Biji-bijian</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+      <!-- Formatting Text & Paragraf -->
+      <section class="mb-4 bg-white p-4 rounded shadow-sm">
+        <h2>Mengapa Belajar Suara Hewan Itu Penting?</h2>
+        <p>
+          Mengenal <b>nama-nama hewan</b> dan <i>suara uniknya</i> membantu
+          anak-anak mengembangkan kemampuan kognitif dan kosa kata sejak dini.
+          Setiap hewan memiliki <u>karakteristik suara tersendiri</u> untuk
+          berkomunikasi di habitatnya.
+        </p>
+      </section>
 
-    <!-- Form & Kuis Interaktif (Form + JavaScript) -->
-    <section class="card p-4 shadow-sm mb-4 border-primary">
-      <h2 class="text-primary">🎮 Kuis Tebak Suara Hewan</h2>
-      <p>Pilih jawaban yang benar berdasarkan pertanyaan di bawah ini:</p>
+      <!-- List & Link -->
+      <section class="mb-4 bg-white p-4 rounded shadow-sm">
+        <h3>Kategori Hewan Berdasarkan Habitat:</h3>
+        <ul>
+          <li><b>Darat:</b> Kucing, Anjing, Sapi, Singa</li>
+          <li><b>Air:</b> Ikan, Paus, Lumba-lumba</li>
+          <li><b>Udara (Burung):</b> Burung Hantu, Ayam, Bebek</li>
+        </ul>
+        <p>
+          Referensi belajar lanjutan:
+          <a
+            href="https://id.wikipedia.org/wiki/Hewan"
+            target="_blank"
+            rel="noopener"
+            >Wikipedia - Dunia Hewan</a
+          >
+        </p>
+      </section>
 
-      <form id="quizForm">
-        <!-- Soal 1 -->
-        <div class="mb-4">
-          <label class="form-label fw-bold">1. Hewan apakah yang mengeluarkan suara "Mooo... Mooo..."?</label>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="q1" value="wrong" id="q1a">
-            <label class="form-check-label" for="q1a">Kambing</label>
+      <!-- Audio & Video -->
+      <section class="mb-4 bg-white p-4 rounded shadow-sm">
+        <h3>Media Pembelajaran Suara Hewan</h3>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <h5>🎵 Contoh Suara Kucing:</h5>
+            <audio controls class="w-100">
+              <source
+                src="https://www.w3schools.com/html/horse.ogg"
+                type="audio/ogg"
+              />
+              Browser Anda tidak mendukung elemen audio.
+            </audio>
+            <small class="text-muted">*Contoh pemutar audio suara hewan</small>
           </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="q1" value="correct" id="q1b">
-            <label class="form-check-label" for="q1b">Sapi</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="q1" value="wrong" id="q1c">
-            <label class="form-check-label" for="q1c">Kucing</label>
+          <div class="col-md-6 mb-3">
+            <h5>🎬 Video Suara Hewan:</h5>
+            <video controls class="w-100 rounded" style="max-height: 200px">
+              <source
+                src="https://www.w3schools.com/html/mov_bbb.mp4"
+                type="video/mp4"
+              />
+              Browser Anda tidak mendukung elemen video.
+            </video>
           </div>
         </div>
+      </section>
 
-        <!-- Soal 2 -->
-        <div class="mb-4">
-          <label class="form-label fw-bold">2. Suara unik "Kukuruyuk!" berasal dari hewan apa?</label>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="q2" value="correct" id="q2a">
-            <label class="form-check-label" for="q2a">Ayam Jago</label>
+      <!-- Tabel Suara Hewan -->
+      <section class="mb-4 bg-white p-4 rounded shadow-sm">
+        <h3>Tabel Suara Hewan Populer</h3>
+        <table
+          class="table table-bordered table-striped text-center align-middle"
+        >
+          <thead class="table-warning">
+            <tr>
+              <th>Nama Hewan</th>
+              <th>Bunyi Suara (Onomatope)</th>
+              <th>Ciri khas Suara</th>
+              <th>Makanan Utama</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Kucing 🐱</td>
+              <td><b>"Meong... Meong..."</b></td>
+              <td>Mengeong lembut saat meminta makan</td>
+              <td>Ikan / Daging</td>
+            </tr>
+            <tr>
+              <td>Sapi 🐮</td>
+              <td><b>"Mooo... Mooo..."</b></td>
+              <td>Lenguhan berat & bergema</td>
+              <td>Rumput</td>
+            </tr>
+            <tr>
+              <td>Anjing 🐶</td>
+              <td><b>"Guk... Guk!"</b> / <b>"Gong... Gong!"</b></td>
+              <td>Gonggongan nyaring untuk menjaga tempat</td>
+              <td>Daging</td>
+            </tr>
+            <tr>
+              <td>Ayam Jago 🐓</td>
+              <td><b>"Kukuruyuk!"</b></td>
+              <td>Berkokok kencang di pagi hari</td>
+              <td>Biji-bijian</td>
+            </tr>
+            <tr>
+              <td>Kambing 🐐</td>
+              <td><b>"Mbee... Mbee..."</b></td>
+              <td>Suara mengembik dengan nada tinggi</td>
+              <td>Daun & Rumput</td>
+            </tr>
+            <tr>
+              <td>Bebek 🦆</td>
+              <td><b>"Kwek... Kwek..."</b></td>
+              <td>Suara bersahutan saat berenang</td>
+              <td>Cacing & Biji-bijian</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Form & Kuis Interaktif (Form + JavaScript) -->
+      <section class="card p-4 shadow-sm mb-4 border-primary">
+        <h2 class="text-primary">🎮 Kuis Tebak Suara Hewan</h2>
+        <p>Pilih jawaban yang benar berdasarkan pertanyaan di bawah ini:</p>
+
+        <form id="quizForm">
+          <!-- Soal 1 -->
+          <div class="mb-4">
+            <label class="form-label fw-bold"
+              >1. Hewan apakah yang mengeluarkan suara "Mooo... Mooo..."?</label
+            >
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="q1"
+                value="wrong"
+                id="q1a"
+              />
+              <label class="form-check-label" for="q1a">Kambing</label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="q1"
+                value="correct"
+                id="q1b"
+              />
+              <label class="form-check-label" for="q1b">Sapi</label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="q1"
+                value="wrong"
+                id="q1c"
+              />
+              <label class="form-check-label" for="q1c">Kucing</label>
+            </div>
           </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="q2" value="wrong" id="q2b">
-            <label class="form-check-label" for="q2b">Bebek</label>
+
+          <!-- Soal 2 -->
+          <div class="mb-4">
+            <label class="form-label fw-bold"
+              >2. Suara unik "Kukuruyuk!" berasal dari hewan apa?</label
+            >
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="q2"
+                value="correct"
+                id="q2a"
+              />
+              <label class="form-check-label" for="q2a">Ayam Jago</label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="q2"
+                value="wrong"
+                id="q2b"
+              />
+              <label class="form-check-label" for="q2b">Bebek</label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="q2"
+                value="wrong"
+                id="q2c"
+              />
+              <label class="form-check-label" for="q2c">Burung Hantu</label>
+            </div>
           </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="q2" value="wrong" id="q2c">
-            <label class="form-check-label" for="q2c">Burung Hantu</label>
-          </div>
-        </div>
 
-        <button type="button" class="btn btn-success btn-lg" onclick="cekJawaban()">Periksa Jawaban 🚀</button>
-      </form>
-      
-      <!-- Output Hasil Javascript (c) -->
-      <div id="hasil" class="mt-4 p-3 rounded d-none"></div>
-    </section>
-  </div>
+          <button
+            type="button"
+            class="btn btn-success btn-lg"
+            onclick="cekJawaban()"
+          >
+            Periksa Jawaban 🚀
+          </button>
+        </form>
 
-  <!-- JavaScript (c) -->
-  <script>
-    function cekJawaban() {
-      const q1 = document.querySelector('input[name="q1"]:checked');
-      const q2 = document.querySelector('input[name="q2"]:checked');
-      const hasilDiv = document.getElementById('hasil');
+        <!-- Output Hasil Javascript (c) -->
+        <div id="hasil" class="mt-4 p-3 rounded d-none"></div>
+      </section>
+    </div>
+    <!-- halllo -->
 
-      if (!q1 || !q2) {
-        hasilDiv.classList.remove('d-none', 'alert-success', 'alert-danger');
-        hasilDiv.classList.add('alert', 'alert-warning');
-        hasilDiv.innerText = "⚠️ Harap jawab semua pertanyaan kuis terlebih dahulu!";
-        return;
+    <!-- JavaScript (c) -->
+    <script>
+      function cekJawaban() {
+        const q1 = document.querySelector('input[name="q1"]:checked');
+        const q2 = document.querySelector('input[name="q2"]:checked');
+        const hasilDiv = document.getElementById("hasil");
+
+        if (!q1 || !q2) {
+          hasilDiv.classList.remove("d-none", "alert-success", "alert-danger");
+          hasilDiv.classList.add("alert", "alert-warning");
+          hasilDiv.innerText =
+            "⚠️ Harap jawab semua pertanyaan kuis terlebih dahulu!";
+          return;
+        }
+
+        let skor = 0;
+        if (q1.value === "correct") skor += 50;
+        if (q2.value === "correct") skor += 50;
+
+        hasilDiv.classList.remove("d-none", "alert-warning");
+
+        if (skor === 100) {
+          hasilDiv.classList.remove("alert-danger");
+          hasilDiv.classList.add("alert", "alert-success");
+          hasilDiv.innerHTML = `<strong>Luar Biasa! 🎉</strong><br>Skor Anda: 100/100. Anda sudah sangat kenal dengan suara hewan!`;
+        } else {
+          hasilDiv.classList.remove("alert-success");
+          hasilDiv.classList.add("alert", "alert-danger");
+          hasilDiv.innerHTML = `<strong>Masih Ada yang Salah! ❌</strong><br>Skor Anda: ${skor}/100. Coba periksa kembali jawaban Anda!`;
+        }
       }
-
-      let skor = 0;
-      if (q1.value === "correct") skor += 50;
-      if (q2.value === "correct") skor += 50;
-
-      hasilDiv.classList.remove('d-none', 'alert-warning');
-      
-      if (skor === 100) {
-        hasilDiv.classList.remove('alert-danger');
-        hasilDiv.classList.add('alert', 'alert-success');
-        hasilDiv.innerHTML = `<strong>Luar Biasa! 🎉</strong><br>Skor Anda: 100/100. Anda sudah sangat kenal dengan suara hewan!`;
-      } else {
-        hasilDiv.classList.remove('alert-success');
-        hasilDiv.classList.add('alert', 'alert-danger');
-        hasilDiv.innerHTML = `<strong>Masih Ada yang Salah! ❌</strong><br>Skor Anda: ${skor}/100. Coba periksa kembali jawaban Anda!`;
-      }
-    }
-  </script>
-</body>
+    </script>
+  </body>
 </html>
