@@ -1,15 +1,205 @@
 body {
-  background-color: #f0f8ff;
+  background-color: #eef3f6;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+
+/* ===== Top Bar (gaya situs pemerintahan) ===== */
+.topbar {
+  background: #065366;
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 6px 0;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  background: #ffffff;
+  padding: 10px 0;
+  transition: box-shadow 0.3s;
+}
+.navbar.scrolled {
+  box-shadow: 0 4px 12px rgba(6, 83, 102, 0.35);
+}
+.navbar-brand {
+  color: #065366;
+}
+.brand-logo {
+  font-size: 2rem;
+  margin-right: 10px;
+}
+.navbar-brand small {
+  color: #d47800;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* ===== Efek Navbar: garis bawah yang menggeser saat hover ===== */
+.nav-link {
+  position: relative;
+  color: #333;
+  font-weight: 500;
+  padding: 8px 14px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #065366, #d47800);
+  transition: width 0.35s ease;
+  border-radius: 3px;
+}
+.nav-link:hover {
+  color: #065366;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+.nav-link.active {
+  color: #d47800;
+  font-weight: 700;
+}
+.nav-link.active::after {
+  width: 100%;
+}
+.navbar-toggler {
+  border-color: #065366;
+}
+
+/* ===== Hero ===== */
 .hero-section {
-  background: linear-gradient(135deg, #ff9900, #ff5500);
-  color: white;
-  padding: 40px 0;
+  background: linear-gradient(135deg, #065366 0%, #0b7a8f 60%, #d47800 130%);
+  color: #fff;
 }
-.animal-card {
-  transition: transform 0.2s;
+.hero-section h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.25);
 }
-.animal-card:hover {
-  transform: scale(1.03);
+.hero-img {
+  border: 6px solid rgba(255, 255, 255, 0.6);
+  animation: fadeUp 1.2s ease;
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Running Text (marquee) ===== */
+.marquee {
+  background: #d47800;
+  color: #fff;
+  overflow: hidden;
+  padding: 10px 0;
+  font-weight: bold;
+}
+.marquee-inner {
+  display: flex;
+  white-space: nowrap;
+  animation: berjalan 18s linear infinite;
+}
+.marquee-inner span {
+  margin: 0 50px;
+}
+@keyframes berjalan {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* ===== Section Card ===== */
+.section-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 28px;
+  border-top: 6px solid #065366;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  color: #333;
+}
+.section-title {
+  color: #065366;
+  font-weight: 700;
+  border-bottom: 2px dashed #d47800;
+  padding-bottom: 10px;
+}
+
+/* ===== Kartu Hewan 3D ===== */
+.card-3d {
+  background: linear-gradient(160deg, #065366, #0b7a8f);
+  color: #fff;
+  border-radius: 16px;
+  padding: 24px 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.25s, box-shadow 0.25s;
+  transform-style: preserve-3d;
+}
+.card-3d:hover {
+  box-shadow: 0 18px 40px rgba(6, 83, 102, 0.45);
+}
+.animal-emoji {
+  font-size: 4rem;
+  display: block;
+  line-height: 1.2;
+  transform: translateZ(40px);
+  transition: transform 0.25s;
+  filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.35));
+}
+.card-3d h5 {
+  transform: translateZ(25px);
+  margin-top: 8px;
+  font-weight: 700;
+}
+.card-3d small {
+  transform: translateZ(15px);
+  color: #ffe0b0;
+}
+
+/* ===== Tabel ===== */
+.table-head th {
+  background: #065366;
+  color: #fff;
+  border-color: #065366;
+}
+.table-striped tbody tr:nth-of-type(odd) {
+  --bs-table-bg: #e8f4f7;
+}
+
+/* ===== Tombol & Form ===== */
+.btn-gov {
+  background: linear-gradient(90deg, #065366, #0b7a8f);
+  color: #fff;
+  border: none;
+  font-weight: 600;
+}
+.btn-gov:hover {
+  background: linear-gradient(90deg, #d47800, #065366);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(212, 120, 0, 0.4);
+  transition: 0.3s;
+}
+.form-check-input:checked {
+  background-color: #065366;
+  border-color: #065366;
+}
+
+/* ===== Footer ===== */
+.footer {
+  background: #044352;
+  color: #fff;
 }
