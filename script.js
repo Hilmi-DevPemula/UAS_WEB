@@ -1,3 +1,8 @@
+// Fungsi Flip Kartu Nama
+function flipCard(card) {
+  card.classList.toggle("is-flipped");
+}
+
 // Navbar menambahkan bayangan saat di-scroll
 window.addEventListener("scroll", function () {
   const nav = document.getElementById("mainNav");
