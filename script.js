@@ -23,21 +23,23 @@ function cekJawaban() {
       const q1 = document.querySelector('input[name="q1"]:checked');
       const q2 = document.querySelector('input[name="q2"]:checked');
       const q3 = document.querySelector('input[name="q3"]:checked');
+      const q4 = document.querySelector('input[name="q4"]:checked');
       const hasilDiv = document.getElementById('hasil');
 
       // Validasi jika ada soal yang belum dijawab
-      if (!q1 || !q2 || !q3) {
+      if (!q1 || !q2 || !q3 || !q4) {
         hasilDiv.classList.remove('d-none', 'alert-success', 'alert-danger');
         hasilDiv.classList.add('alert', 'alert-warning');
-        hasilDiv.innerText = "⚠️ Harap jawab semua 3 pertanyaan kuis terlebih dahulu!";
+        hasilDiv.innerText = "⚠️ Harap jawab semua 4 pertanyaan kuis terlebih dahulu!";
         return;
       }
 
       // Hitung skor total (maksimal 100)
       let skor = 0;
-      if (q1.value === "correct") skor += 33;
-      if (q2.value === "correct") skor += 33;
-      if (q3.value === "correct") skor += 34; // Genap total 100
+      if (q1.value === "correct") skor += 25;
+      if (q2.value === "correct") skor += 25;
+      if (q3.value === "correct") skor += 25;
+      if (q4.value === "correct") skor += 25;
 
       hasilDiv.classList.remove('d-none', 'alert-warning');
       
