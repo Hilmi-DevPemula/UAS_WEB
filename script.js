@@ -1,18 +1,3 @@
-// Efek nama kelompok 3D: split per huruf
-window.addEventListener("DOMContentLoaded", function () {
-  const fireNames = document.querySelectorAll(".fire-name");
-  fireNames.forEach(function (nameElement) {
-    const text = nameElement.innerText;
-    nameElement.innerHTML = "";
-    [...text].forEach(function (char) {
-      const span = document.createElement("span");
-      span.className = char === " " ? "char space" : "char";
-      span.innerText = char;
-      nameElement.appendChild(span);
-    });
-  });
-});
-
 // Navbar menambahkan bayangan saat di-scroll
 window.addEventListener("scroll", function () {
   const nav = document.getElementById("mainNav");
@@ -35,37 +20,38 @@ document.querySelectorAll(".card-3d").forEach(function (card) {
 
 // Kuis tebak suara hewan
 function cekJawaban() {
-  const q1 = document.querySelector('input[name="q1"]:checked');
-  const q2 = document.querySelector('input[name="q2"]:checked');
-  const hasilDiv = document.getElementById("hasil");
+      const q1 = document.querySelector('input[name="q1"]:checked');
+      const q2 = document.querySelector('input[name="q2"]:checked');
+      const q3 = document.querySelector('input[name="q3"]:checked');
+      const hasilDiv = document.getElementById('hasil');
 
-  if (!q1 || !q2) {
-    hasilDiv.classList.remove("d-none", "alert-success", "alert-danger");
-    hasilDiv.classList.add("alert", "alert-warning");
-    hasilDiv.innerText = "⚠️ Harap jawab semua pertanyaan kuis terlebih dahulu!";
-    return;
-  }
+      // Validasi jika ada soal yang belum dijawab
+      if (!q1 || !q2 || !q3) {
+        hasilDiv.classList.remove('d-none', 'alert-success', 'alert-danger');
+        hasilDiv.classList.add('alert', 'alert-warning');
+        hasilDiv.innerText = "⚠️ Harap jawab semua 3 pertanyaan kuis terlebih dahulu!";
+        return;
+      }
 
-  let skor = 0;
-  if (q1.value === "correct") skor += 50;
-  if (q2.value === "correct") skor += 50;
+      // Hitung skor total (maksimal 100)
+      let skor = 0;
+      if (q1.value === "correct") skor += 33;
+      if (q2.value === "correct") skor += 33;
+      if (q3.value === "correct") skor += 34; // Genap total 100
 
-  hasilDiv.classList.remove("d-none", "alert-warning");
+      hasilDiv.classList.remove('d-none', 'alert-warning');
+      
+      if (skor === 100) {
+        hasilDiv.classList.remove('alert-danger');
+        hasilDiv.classList.add('alert', 'alert-success');
+        hasilDiv.innerHTML = `<strong>Sempurna! 🎉</strong><br>Skor Anda: 100/100. Anda berhasil menebak semua suara hewan!`;
+      } else {
+        hasilDiv.classList.remove('alert-success');
+        hasilDiv.classList.add('alert', 'alert-danger');
+        hasilDiv.innerHTML = `<strong>Hampir Benar! ❌</strong><br>Skor Anda: ${skor}/100. Coba periksa kembali jawaban Anda!`;
+      }
+    }
 
-  if (skor === 100) {
-    hasilDiv.classList.remove("alert-danger");
-    hasilDiv.classList.add("alert", "alert-success");
-    hasilDiv.innerHTML =
-      "<strong>Luar Biasa! 🎉</strong><br>Skor Anda: 100/100. Anda sudah sangat kenal dengan suara hewan!";
-  } else {
-    hasilDiv.classList.remove("alert-success");
-    hasilDiv.classList.add("alert", "alert-danger");
-    hasilDiv.innerHTML =
-      "<strong>Masih Ada yang Salah! ❌</strong><br>Skor Anda: " +
-      skor +
-      "/100. Coba periksa kembali jawaban Anda!";
-  }
-}
 
 // Form kontak sederhana
 function kirimPesan(e) {
