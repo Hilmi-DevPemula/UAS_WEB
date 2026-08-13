@@ -3,7 +3,7 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* ===== Top Bar (gaya situs pemerintahan) ===== */
+/* ===== Top Bar ===== */
 .topbar {
   background: #065366;
   color: #fff;
@@ -96,7 +96,7 @@ body {
   }
 }
 
-/* ===== Running Text (marquee) ===== */
+/* ===== Running Text  ===== */
 .marquee {
   background: #d47800;
   color: #fff;
